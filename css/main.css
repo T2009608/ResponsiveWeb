@@ -1,0 +1,135 @@
+/*
+Time:2017.1.2
+Author:Joel
+Version:1.0.0
+*/
+*{margin: 0;padding: 0}
+
+body,
+html{
+     font-size: 100%;
+}
+body{
+    font-family: "Lato", "Calibri", "Arial", "sans-serif";
+    color: #47a3da;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: "";
+}
+.clearfix:after{
+    clear: both;
+}
+/*头部样式*/
+header{
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+    padding: 0 0 2rem 0;
+}
+header h1{
+    font-weight: 500;
+}
+/*内部容器*/
+.ul-wrap{
+    margin: 0 auto;
+}
+.ul-wrap .li-item{
+    list-style: none;
+    position: relative;
+}
+.ul-wrap .li-item .ittime{
+    width: 10%;
+    height: 100%;
+    float: left;
+    border-right: 0.3rem solid #47a3da;
+    position: absolute;
+    top: 0;
+    left: 5rem;
+}
+.ul-wrap .li-item .ittime span{
+    display: block;
+}
+.ul-wrap .li-item .ittime span:first-child{
+    font-size: 0.8rem;
+    color: #c0c0c0;
+    padding-left: 1rem;
+}
+.ul-wrap .li-item .ittime span:last-child{
+    font-size: 2rem;
+    font-weight: 100;
+    color: #47a3da;
+}
+.ul-wrap .li-item:nth-child(even) .ittime span{
+    color: blueviolet;
+}
+.ul-wrap .li-item .itpara{
+    width: 70%;
+    float: right;
+    background-color: #47a3da;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    position: relative;
+}
+.ul-wrap .li-item .itpara h2,
+p{
+    padding: 1.5rem;
+    color: #fff;
+}
+.ul-wrap .li-item .itpara h2{
+    border-bottom: 1px solid #fff;
+}
+.ul-wrap .li-item:nth-child(even) .itpara h2{
+    color: blueviolet;
+}
+.ul-wrap .li-item:nth-child(even) .itpara p{
+    color: blueviolet;
+}
+.triangle-left{
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-right: 2rem solid #47a3da;
+    border-bottom: 1rem solid transparent;
+    position: absolute;
+    left: -1.5rem;
+}
+/*媒体查询*/
+@media only screen and (min-width: 40rem) and (max-width: 55rem){
+    header{
+        text-align: center;
+    }
+    .ul-wrap .li-item .itpara{
+        width: 50%;
+        float: right;
+        background-color: #47a3da;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 0 1rem 1rem 1rem;
+        position: relative;
+    }
+    .ul-wrap .li-item .ittime{
+        width: 20%;
+    }
+    .ul-wrap .li-item .ittime span:last-child{
+        font-size: 1.5rem;
+        font-weight: 100;
+        color: #47a3da;
+    }
+}
+@media only screen and (max-width: 40rem){
+    header{
+        text-align: center;
+    }
+    .ul-wrap .li-item .ittime{
+        width: 30%;
+        height: 100%;
+        float: left;
+        padding-left: 8rem;
+        border-right: none;
+        position: static;
+    }
+}
